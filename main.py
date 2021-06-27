@@ -1,12 +1,13 @@
 # Guess a number game using Python Starter Pack
-
-from random import randint  #To generate a random number
+ #To get a random number
+from random import randint  
 #Ask for the name and add name varible 
 name = input("Please Enter your name: ")
 print("Welcome to my Number game, " + name)
 
 def game():
-    rand_number = randint(0,100)   #Generates a random number
+    #randint gives you a random number using (0,100) is the range to choose from can be changed  
+    rand_number = randint(0,100)   
     print("\nI have selected a number between 1 to 100...")
     print("You have 6 chances to guess that number...")
     i = 1
@@ -32,7 +33,8 @@ def game():
     if r==1:
         print("Sorry you lost the game!!")
         print("My number was = " + str(rand_number))
-
+        
+#to restart or end the game
 def main():
     game()
     while True:
